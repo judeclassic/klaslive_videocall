@@ -54,7 +54,7 @@ const Room = (props) => {
     const roomID = 'roomID';
 
     useEffect(() => {
-        socketRef.current = io.connect("http://localhost:8000");
+        socketRef.current = io.connect("https://klasserver.herokuapp.com");
         navigator.mediaDevices.getUserMedia({ video: true, audio: true }).then(stream => {
             userVideo.current.srcObject = stream;
             socketRef.current.emit("join room", roomID);
