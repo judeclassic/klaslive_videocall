@@ -123,7 +123,7 @@ const Room = (props) => {
         <div className="App">
             <div class="sidenav">
                 <div className='video-container'>
-                {
+                {/* {
                     <video
                     playsInline
                     autoPlay
@@ -131,7 +131,7 @@ const Room = (props) => {
                     ref={userVideo}
                     style={{width: "380px", height: "350px",overflow: 'hidden', marginLeft: '10px', borderRadius: '20px'}}
                     />
-                }
+                } */}
                 </div>
                 <div>
                 <TextField
@@ -180,7 +180,7 @@ const Room = (props) => {
 
             <div class="main">
             <Container>
-                {/* <StyledVideo muted ref={userVideo} autoPlay playsInline /> */}
+                <StyledVideo muted ref={userVideo} autoPlay playsInline />
                 {peers.map((peer, index) => {
                     return (
                         <Video playsInline muted key={index} peer={peer} />
