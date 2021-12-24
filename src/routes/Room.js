@@ -1,11 +1,11 @@
 import '../App.css';
 import React, { useEffect, useRef, useState } from "react";
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
+// import Button from '@material-ui/core/Button';
+// import IconButton from '@material-ui/core/IconButton';
 import TextField from '@material-ui/core/TextField';
-import AssignmentIcon from '@material-ui/icons/Assignment';
-import PhoneIcon from '@material-ui/icons/Phone';
-import { CopyToClipboard} from 'react-copy-to-clipboard';
+// import AssignmentIcon from '@material-ui/icons/Assignment';
+// import PhoneIcon from '@material-ui/icons/Phone';
+// import { CopyToClipboard} from 'react-copy-to-clipboard';
 import io from "socket.io-client";
 import Peer from "simple-peer";
 import styled from "styled-components";
@@ -31,7 +31,7 @@ const Video = (props) => {
         props.peer.on("stream", stream => {
             ref.current.srcObject = stream;
         })
-    }, []);
+    },);
 
     return (
         <StyledVideo playsInline autoPlay ref={ref} />
@@ -49,7 +49,7 @@ const Room = (props) => {
     const socketRef = useRef();
     const userVideo = useRef();
     const peersRef = useRef([]);
-    const [names, setNames] = useState([]);
+    // const [names, setNames] = useState([]);
     const [name, setName] = useState('')
     const roomID = 'roomID';
 
